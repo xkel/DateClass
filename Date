@@ -1,0 +1,42 @@
+class Date:
+
+  def __init__(self,day,month,year):
+    self.setDay(day)
+    self.setMonth(month)
+    self.setYear(year)
+  
+  def setDay(self,newDay):
+    if 1<=newDay<=30:
+      self.Day = newDay
+    else:
+      print "Please enter a valid day between 1 and 30!"
+    
+  def setMonth(self,newMonth):
+    if 1<=newMonth<=12:
+      self.Month = newMonth
+    else:
+      print "Please enter a valid month between 1 and 12!"
+
+  def setYear(self,newYear):
+      self.Year = newYear
+    
+  def getDay(self):
+    return self.Day
+  
+  def getMonth(self):
+    return self.Month
+  
+  def getYear(self):
+    return self.Year
+  
+  def formatDate(self):
+    Day = str(self.getDay)
+    result = ""
+    if self.getMonth == 1:
+       result = "January "
+    if self.getMonth == 2:
+      result = "February "
+    if self.getMonth == 3:
+      result = "March "
+    return result+Day+","+str(self.Year)
+    
